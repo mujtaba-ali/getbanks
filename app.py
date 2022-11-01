@@ -13,7 +13,7 @@ db = SQLAlchemy(app)
 def index():
     branch_name = request.args.get("branch_name")
     if branch_name:
-        return jsonified(branch_name)
+        return jsonified(branch_name.upper())
     else:
         return [{}]
 
